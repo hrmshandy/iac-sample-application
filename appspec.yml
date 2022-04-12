@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/cloudcasts/cloudcasts.io
+    destination: /home/seven8/seven8
 permissions:
-  - object: /home/cloudcasts/cloudcasts.io
-    owner: cloudcasts
-    group: cloudcasts
+  - object: /home/seven8/seven8
+    owner: seven8
+    group: seven8
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh

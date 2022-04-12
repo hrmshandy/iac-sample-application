@@ -1,6 +1,5 @@
-# CloudCasts Sample Application
+# seven8 Sample Application
 
-A sample application to host in CloudCasts infrastructure.
+A sample application to host in seven8 infrastructure.
 
-See more at https://cloudcasts.io
-
+See more at https://seven8

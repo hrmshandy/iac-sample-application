@@ -5,4 +5,4 @@ if [[ "$DEPLOYMENT_GROUP_NAME" == *"queue"* ]]; then
     supervisorctl stop all
 fi
 
-rm -rf /home/cloudcasts/cloudcasts.io
+rm -rf /home/seven8/seven8

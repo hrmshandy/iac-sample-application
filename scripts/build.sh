@@ -19,10 +19,10 @@ if [[ "$DO_BUILD" == "yes" ]]; then
     composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
 
     # Create our build artifact
-    git archive -o builds/cloudcasts.zip --worktree-attributes HEAD
-    zip -qur builds/cloudcasts.zip vendor
-    zip -qur builds/cloudcasts.zip public
+    git archive -o builds/seven8.zip --worktree-attributes HEAD
+    zip -qur builds/seven8.zip vendor
+    zip -qur builds/seven8.zip public
 
     # Upload artifact to s3
-    aws s3 cp builds/cloudcasts.zip s3://cloudcasts-artifacts/$CODEBUILD_RESOLVED_SOURCE_VERSION.zip
+    aws s3 cp builds/seven8.zip s3://seven8-artifacts/$CODEBUILD_RESOLVED_SOURCE_VERSION.zip
 fi

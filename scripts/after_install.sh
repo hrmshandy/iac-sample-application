@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # Generate .env
-cd /home/cloudcasts/cloudcasts.io
-aws --region us-east-2 ssm get-parameter \
+cd /home/seven8/seven8
+aws --region ap-southeast-3 ssm get-parameter \
     --with-decryption \
-    --name /cloudcasts/staging/env \
+    --name /seven8/staging/env \
     --output text \
     --query 'Parameter.Value' > .env
 
 # Set permissions
-chown -R cloudcasts:cloudcasts /home/cloudcasts/cloudcasts.io
+chown -R seven8:seven8 /home/seven8/seven8
 
 # Below conditional syntax from here:
 # https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash
@@ -28,4 +28,4 @@ if [[ "$DEPLOYMENT_GROUP_NAME" == *"queue"* ]]; then
 fi
 
 # Optionally, depending on your needs
-# sudo -u cloudcasts php artisan migrate --force
+# sudo -u seven8 php artisan migrate --force
